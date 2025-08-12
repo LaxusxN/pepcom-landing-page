@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet";
 import constitucionempresa from "../assets/constitucionempresa.svg"
 import s2 from "../assets/s2.svg"
 import s3 from "../assets/s3.svg"
@@ -60,6 +61,18 @@ const tramites=[
 const Home = () => {
   return (
     <div>
+      {/* Helmet solo para SEO */}
+      <Helmet>
+        <title>Estudio Contable en Lima | EPCOM</title>
+        <meta
+          name="description"
+          content="Servicios de contabilidad, asesoría tributaria, laboral y financiera en Lima. Confianza y experiencia para tu negocio con EPCOM."
+        />
+        <meta
+          name="keywords"
+          content="estudio contable en Lima, contabilidad, asesoría tributaria, asesoría laboral, EPCOM"
+        />
+      </Helmet>
 <section className="w-full h-[70vh] bg-gray-50  bg-cover bg-center bg-no-repeat relative"
     style={{ backgroundImage: `url(${mainimage})` }}>
      
@@ -69,7 +82,7 @@ const Home = () => {
     
         <div className="  w-full md:w-1/2 text-center md:text-left">
         <p className="text-4xl md:text-5xl font-bold  leading-tight">
-            Estudio Contable
+            Estudio Contable en Lima
           </p>
         <div className="flex items-baseline">
           <h1 className="text-4xl md:text-5xl font-bold  leading-tight">
